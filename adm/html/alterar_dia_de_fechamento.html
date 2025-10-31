@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Administrador Fisioterapia</title>
+
+    <link rel="stylesheet" href="../css/style_geral.css">
+    <link rel="stylesheet" href="../css/style_form.css">
+    <script src="https://kit.fontawesome.com/86b61fdc16.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <h1>SIS.adm</h1>
+      <button class="menu-btn" id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <article class="container">
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i></i> Dashboard</a></li>
+          <li><a href="clientes.html"><i class="fa-solid fa-users"></i> Clientes</a></li>
+          <li><a href="dias_de_fechamento.html"><i class="fa-solid fa-calendar-days"></i> Dias de Fechamento</a></li>
+        </ul>
+
+        <section class="usuario">
+          <div class="avatar"><i class="fa-solid fa-web-awesome"></i></div>
+          <p>Logado como<br><span class="bold">ADM</span></p>
+        </section>
+      </nav>
+
+      <div class="conteudo">
+        <article class="bg-br indicador-nav">
+          <p><i class="fa-solid fa-calendar-days"></i> Dias de Fechamento > Alterar Dia de Fechamento</p>
+        </article>
+        <main>
+            <form action="" method="POST" class="bg-br">
+                <label for="nome">
+                    Nome: <input type="text" name="nome" id="nome">
+                </label>
+
+                <section class="agrupado">
+                  <fieldset>
+                    <legend>Início do Fechamento</legend>
+                      <section class="agrupado">
+                        <label for="data_inicio">
+                            Data: <input type="date" name="data_inicio" id="data_inicio">
+                        </label>
+                        <label for="hora_inicio">
+                            Hora: <input type="time" name="hora_inicio" id="hora_inicio">
+                        </label>
+                      </section>
+                  </fieldset>
+                
+                  <fieldset>
+                      <legend>Fim do Fechamento</legend>
+                      <section class="agrupado">
+                        <label for="data_fim">
+                            Data: <input type="date" name="data_fim" id="data_fim">
+                        </label>
+                        <label for="hora_fim">
+                            Hora: <input type="time" name="hora_fim" id="hora_fim">
+                        </label>
+                      </section>
+                  </fieldset>
+                </section>
+
+                <label for="motivo">
+                    Motivo do Fechamento (opcional): <input type="text" name="motivo" id="motivo">
+                </label>
+                <!--TODO: preferencialmente, faz aquilo que ja aparece as informações no input field-->
+                <button type="button" class="btn" onclick="">Alterar Fechamento</button>
+            </form>
+        </main>
+      </div>
+    </article>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="../js/menu.js"></script>
+</body>
+</html>
