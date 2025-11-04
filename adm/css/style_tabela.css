@@ -10,8 +10,9 @@ main>article, .barra-pesquisa{
 }
 
 main>article{
-    justify-content: space-between;
-    margin-bottom: 1.5em;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em;
 }
 
 .barra-pesquisa{
@@ -23,6 +24,7 @@ main>article{
     padding: 0.6em 0.5em;
     border: 1px solid var(--borda);
     outline: none;
+    width: 100%;
 }
 /*tabela inicio*/
 table{
@@ -41,6 +43,7 @@ th, td, .titulo-tabela{
 }
 
 .titulo-tabela{
+    margin-top: 1em;
     border-bottom: none;
     font-weight: bold;
 }
@@ -56,15 +59,12 @@ th i{
   margin-left: 4px;
 }
 
-.acoes{
-    white-space: nowrap;
-}
-
 .acoes button{
     padding: 0.5em 0.6em;
     margin: 0 5px;
     color: var(--fonteWhite);
 }
+.acoes button:nth-child(odd){margin-bottom: 0.5em;}
 
 .editar{background-color: #99d192;}
 .excluir{background-color: #cf7777;}
@@ -72,3 +72,12 @@ th i{
 .editar:hover{background-color: #7aba72;}
 .excluir:hover{background-color: #bf6262;}
 /*tabela fim*/
+
+/*desktop*/
+@media(min-width:500px){
+    main>article{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
