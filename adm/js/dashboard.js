@@ -89,7 +89,7 @@ function carregarDashboard() {
 
                 htmlConsultasRecentes.innerHTML += `
                     <li>
-                        Tipo de consulta
+                        status de consulta
                         <span class="${statusClass}">${statusTexto}</span>
                     </li>
                 `;
